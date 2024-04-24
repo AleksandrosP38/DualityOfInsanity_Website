@@ -1,0 +1,58 @@
+.container {
+    position: relative;
+}
+
+.container img {
+    display: block;
+    width: 100%;
+}
+
+.dark-box {
+    width: 20%; /* Adjust the width as per your preference */
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+    z-index: 2; /* Ensure the dark box is in front of the image */
+    color: white; /* Set text color to white */
+    display: flex; /* Use flexbox for centering */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    font-family: Chiller, sans-serif; /* Specify Chiller font with fallback to sans-serif */
+}
+
+.text-container {
+    padding: 20px; /* Add padding for better readability */
+    text-align: center; /* Center the text horizontally */
+}
+
+.text-container button {
+    margin: 10px; /* Add margin between buttons */
+    padding: 10px 20px; /* Add padding to buttons */
+    font-size: 24px; /* Adjust the font size as per your preference */
+    background-color: transparent; /* Transparent background */
+    border: 2px solid white; /* White border */
+    color: white; /* White text color */
+    cursor: pointer; /* Add pointer cursor on hover */
+}
+
+.text-container button:hover {
+    background-color: white; /* Change background color on hover */
+    color: black; /* Change text color on hover */
+}
+
+.text-container button {
+    margin: 20px; /* Add more margin between buttons */
+    padding: 25px 50px; /* Increase padding to make buttons much bigger */
+    font-size: 36px; /* Increase font size for much bigger buttons */
+    font-family: Chiller, sans-serif; /* Specify Chiller font with fallback to sans-serif */
+    background-color: transparent; /* Transparent background */
+    border: none; /* Remove border */
+    color: white; /* White text color */
+    cursor: pointer; /* Add pointer cursor on hover */
+}
+
+
+
+
