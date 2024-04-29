@@ -42,11 +42,12 @@ body {
     padding: 1vw 2vw;
     font-size: 2vw;
     background-color: transparent;
-    border: 0.2vw solid white;
-    color: white;
+    color: black;
     cursor: pointer;
     font-family: Chiller, sans-serif; /* Updated font family */
+    transform: rotate(-10deg); /* Apply a slight anti-clockwise rotation to the text */
 }
+
 
 .text-container button:hover {
     background-color: white;
@@ -58,7 +59,9 @@ body {
     max-height: 80%; /* Added max-height to ensure it fits within the viewport */
     overflow-y: auto; /* Added overflow-y to enable scrolling if needed */
     position: fixed;
-    transform: translate(-100%, -0%); /* Centering both horizontally and vertically */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); /* Centering the box */
     background-color: rgba(0, 0, 0, 0.7);
     z-index: 2;
     color: white;
@@ -69,7 +72,14 @@ body {
     font-family: Chiller, sans-serif;
 }
 
-
+.button-with-image {
+    /* Set button styles */
+    background-size: contain; /* Ensure the background image fits inside the button */
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+    background-position: center; /* Center the background image */
+    border: none; /* Remove border */
+    outline: none; /* Remove outline */
+}
 
 @media only screen and (max-width: 768px) {
     .dark-box {
@@ -77,9 +87,5 @@ body {
         height: 100vh;
         top: 0;
         right: 0;
-    }
-
-    .text-container button {
-        font-size: 3vw;
     }
 }
