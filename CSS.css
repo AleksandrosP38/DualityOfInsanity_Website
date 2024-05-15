@@ -44,8 +44,8 @@ body {
     background-color: transparent;
     color: black;
     cursor: pointer;
-    font-family: Chiller, sans-serif; /* Updated font family */
-    transform: rotate(-10deg); /* Apply a slight anti-clockwise rotation to the text */
+    font-family: Chiller, sans-serif; 
+    transform: rotate(-10deg); 
 }
 
 
@@ -55,30 +55,30 @@ body {
 }
 
 .dynamic-box {
-    width: 70%; /* Adjusted width to 70% */
-    max-height: 80%; /* Added max-height to ensure it fits within the viewport */
-    overflow-y: auto; /* Added overflow-y to enable scrolling if needed */
+    width: 70%; 
+    max-height: 80%; 
+    overflow-y: auto; 
     position: fixed;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%); /* Centering the box */
+    transform: translate(-50%, -50%); 
     background-color: rgba(0, 0, 0, 0.7);
     z-index: 2;
     color: white;
     display: flex;
-    flex-direction: column; /* Added flex-direction to ensure content flows properly */
+    flex-direction: column; 
     align-items: center;
     justify-content: center;
     font-family: Chiller, sans-serif;
 }
 
 .button-with-image {
-    /* Set button styles */
-    background-size: contain; /* Ensure the background image fits inside the button */
-    background-repeat: no-repeat; /* Prevent the background image from repeating */
-    background-position: center; /* Center the background image */
-    border: none; /* Remove border */
-    outline: none; /* Remove outline */
+    
+    background-size: contain; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    border: none; 
+    outline: none; 
 }
 
 @media only screen and (max-width: 768px) {
