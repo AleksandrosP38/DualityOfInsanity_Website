@@ -1,4 +1,15 @@
 const buttonContainer = document.getElementById('buttonContainer');
+const centerText = document.getElementById('centerText'); // Added reference to the center text
+
+// Function to hide the center text
+function hideCenterText() {
+    centerText.style.display = 'none';
+}
+
+// Function to show the center text
+function showCenterText() {
+    centerText.style.display = 'block';
+}
 
 const buttonBoxData = {
     'Game': {
@@ -45,45 +56,23 @@ Object.keys(buttonBoxData).forEach(text => {
     button.appendChild(buttonText);
     buttonContainer.appendChild(button);
     
-    const lineBreak = document.createElement('br');
-    buttonContainer.appendChild(lineBreak);
-    
     button.addEventListener('click', () => {
+        // Hide the center text when a button is clicked
+        hideCenterText();
+
         if (buttonBoxData[text].text !== currentBoxText) {
             document.querySelectorAll('.dynamic-box').forEach(box => box.remove());
             
             const newDarkBox = document.createElement('div');
             newDarkBox.classList.add('dynamic-box');
-            newDarkBox.style.width = '70%';
-            newDarkBox.style.maxHeight = '80%';
-            newDarkBox.style.overflowY = 'auto';
-            newDarkBox.style.position = 'fixed';
-            newDarkBox.style.top = '50%';
-            newDarkBox.style.left = '50%';
-            newDarkBox.style.transform = 'translate(-50%, -50%)';
-            newDarkBox.style.backgroundColor = 'rgba(0, 0, 0, 0.7)';
-            newDarkBox.style.zIndex = '2';
-            newDarkBox.style.color = 'white';
-            newDarkBox.style.display = 'flex';
-            newDarkBox.style.flexDirection = 'column';
-            newDarkBox.style.alignItems = 'center';
-            newDarkBox.style.justifyContent = 'center';
-            newDarkBox.style.fontFamily = 'Chiller, sans-serif';
-            newDarkBox.style.padding = '2vw';
 
             const closeButton = document.createElement('button');
             closeButton.textContent = 'X';
-            closeButton.style.position = 'absolute';
-            closeButton.style.top = '1vw';
-            closeButton.style.left = '1vw';
-            closeButton.style.background = 'transparent';
-            closeButton.style.border = 'none';
-            closeButton.style.color = 'white';
-            closeButton.style.fontSize = '2vw';
-            closeButton.style.cursor = 'pointer';
             closeButton.addEventListener('click', () => {
                 newDarkBox.remove();
                 currentBoxText = '';
+                // Show the center text when the box is closed
+                showCenterText();
             });
             newDarkBox.appendChild(closeButton);
 
@@ -92,11 +81,8 @@ Object.keys(buttonBoxData).forEach(text => {
 
             const newText = document.createElement('p');
             newText.textContent = buttonBoxData[text].text;
-            newText.style.textAlign = 'center';
-            newText.style.fontSize = '2vw';
 
             newTextContainer.appendChild(newText);
-
             newDarkBox.appendChild(newTextContainer);
 
             document.body.appendChild(newDarkBox);

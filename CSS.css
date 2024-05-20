@@ -17,41 +17,48 @@ body {
     object-fit: cover;
 }
 
-.dark-box {
-    width: 30vw;
-    height: 100vh;
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
     position: absolute;
     top: 0;
-    right: 0;
+    left: 0;
+    width: 100%;
     background-color: rgba(0, 0, 0, 0.7);
     z-index: 2;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: Chiller, sans-serif;
+    padding: 1vw;
+    box-sizing: border-box;
+    justify-content: space-between;
 }
 
-.text-container {
-    padding: 2vw;
+.button-with-image {
+    background-size: contain; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    border: none; 
+    outline: none; 
+    margin: 0.5vw;
+    flex: 1;
+    padding: 1vw;
     text-align: center;
+    background-color: transparent; /* Ensure the background is transparent */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Add transition for smooth hover effect */
 }
 
-.text-container button {
-    margin: 1vw;
-    padding: 1vw 2vw;
-    font-size: 2vw;
-    background-color: transparent;
-    color: black;
-    cursor: pointer;
-    font-family: Chiller, sans-serif; 
-    transform: rotate(-10deg); 
+.button-with-image:hover {
+    transform: scale(1.1); /* Slightly increase the size of the button on hover */
+    background-color: rgba(255, 255, 255, 0.2); /* Add a semi-transparent white background on hover */
 }
 
+.button-with-image:active .button-text {
+    color: white; /* Change text color to white when the button is clicked */
+}
 
-.text-container button:hover {
-    background-color: white;
-    color: black;
+.button-text {
+    display: block;
+    color: black; /* Change text color to black */
+    font-family: Chiller, sans-serif;
+    font-size: 1.5vw;
 }
 
 .dynamic-box {
@@ -70,22 +77,45 @@ body {
     align-items: center;
     justify-content: center;
     font-family: Chiller, sans-serif;
+    padding: 2vw;
 }
 
-.button-with-image {
-    
-    background-size: contain; 
-    background-repeat: no-repeat; 
-    background-position: center; 
-    border: none; 
-    outline: none; 
+.dynamic-box button {
+    position: absolute;
+    top: 1vw;
+    left: 1vw;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 2vw;
+    cursor: pointer;
+}
+
+.text-container {
+    padding: 2vw;
+    text-align: center;
+    font-size: 2vw;
+    color: white;
+}
+
+.center-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 5vw;
+    font-family: Chiller, sans-serif;
+    z-index: 1; /* Ensure this is behind your button container */
 }
 
 @media only screen and (max-width: 768px) {
-    .dark-box {
-        width: 60vw;
-        height: 100vh;
-        top: 0;
-        right: 0;
+    .dynamic-box {
+        width: 90%;
+        height: 80%;
+    }
+
+    .button-text {
+        font-size: 3vw;
     }
 }
