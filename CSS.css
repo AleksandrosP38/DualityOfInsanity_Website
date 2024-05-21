@@ -33,7 +33,6 @@ body {
 }
 
 .button-with-image {
-    background-image: url('images/Tape.png'); /* Corrected background image path */
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -47,6 +46,10 @@ body {
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
+#tapeImage {
+    background-image: url('images/Tape.png');
+}
+
 .button-with-image:hover {
     transform: scale(1.1);
     background-color: rgba(255, 255, 255, 0.2);
@@ -58,7 +61,7 @@ body {
 
 .button-text {
     display: block;
-    color: #ffffff !important; /* Force white text color */
+    color: #ffffff !important;
     font-family: Chiller, sans-serif;
     font-size: 1.5vw;
 }
