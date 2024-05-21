@@ -1,6 +1,6 @@
 const buttonContainer = document.getElementById('buttonContainer');
-const centerText = document.getElementById('centerText'); // Added reference to the center text
-const backgroundImage = document.getElementById('backgroundImage'); // Added reference to the background image
+const centerText = document.getElementById('centerText');
+const backgroundImage = document.getElementById('backgroundImage');
 
 // Function to hide the center text
 function hideCenterText() {
@@ -49,23 +49,22 @@ let currentBoxText = '';
 
 Object.keys(buttonBoxData).forEach(text => {
     const button = document.createElement('button');
-    button.classList.add('button-with-image'); 
-    button.style.backgroundImage = `url(${buttonBoxData[text].image})`; 
-    
+    button.classList.add('button-with-image');
+    button.style.backgroundImage = `url(${buttonBoxData[text].image})`;
+
     const buttonText = document.createElement('span');
     buttonText.classList.add('button-text');
     buttonText.textContent = text;
 
     button.appendChild(buttonText);
     buttonContainer.appendChild(button);
-    
+
     button.addEventListener('click', () => {
-        // Hide the center text when a button is clicked
         hideCenterText();
 
         if (buttonBoxData[text].text !== currentBoxText) {
             document.querySelectorAll('.dynamic-box').forEach(box => box.remove());
-            
+
             const newDarkBox = document.createElement('div');
             newDarkBox.classList.add('dynamic-box');
 
@@ -74,7 +73,6 @@ Object.keys(buttonBoxData).forEach(text => {
             closeButton.addEventListener('click', () => {
                 newDarkBox.remove();
                 currentBoxText = '';
-                // Show the center text when the box is closed
                 showCenterText();
             });
             newDarkBox.appendChild(closeButton);
@@ -95,5 +93,4 @@ Object.keys(buttonBoxData).forEach(text => {
     });
 });
 
-// Add event listener to the center text to toggle background images
 centerText.addEventListener('click', toggleBackgroundImage);
