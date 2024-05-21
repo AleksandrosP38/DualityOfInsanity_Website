@@ -102,11 +102,5 @@ Object.keys(buttonBoxData).forEach(text => {
     });
 });
 
-// Assign the same ID to buttons' images
-document.querySelectorAll('.button-with-image').forEach((button, index) => {
-    button.setAttribute('id', `buttonImage${index}`);
-});
-
-
 // Add event listener to the center text to toggle background images
 centerText.addEventListener('click', toggleBackgroundImage);
