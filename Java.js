@@ -1,5 +1,6 @@
 const buttonContainer = document.getElementById('buttonContainer');
 const centerText = document.getElementById('centerText'); // Added reference to the center text
+const backgroundImage = document.getElementById('backgroundImage'); // Added reference to the background image
 
 // Function to hide the center text
 function hideCenterText() {
@@ -9,6 +10,15 @@ function hideCenterText() {
 // Function to show the center text
 function showCenterText() {
     centerText.style.display = 'block';
+}
+
+// Function to toggle background images
+function toggleBackgroundImage() {
+    if (backgroundImage.src.includes('ImageLight.png')) {
+        backgroundImage.src = 'images/ImageDark.png';
+    } else {
+        backgroundImage.src = 'images/ImageLight.png';
+    }
 }
 
 const buttonBoxData = {
@@ -91,3 +101,6 @@ Object.keys(buttonBoxData).forEach(text => {
         }
     });
 });
+
+// Add event listener to the center text to toggle background images
+centerText.addEventListener('click', toggleBackgroundImage);
