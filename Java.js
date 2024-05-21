@@ -15,9 +15,9 @@ function showCenterText() {
 // Function to toggle background images
 function toggleBackgroundImage() {
     if (backgroundImage.src.includes('ImageLight.png')) {
-        backgroundImage.src = 'images/ImageDark.png';
+        backgroundImage.src = 'images/ImageDark.png'; // Corrected image path
     } else {
-        backgroundImage.src = 'images/ImageLight.png';
+        backgroundImage.src = 'images/ImageLight.png'; // Corrected image path
     }
 }
 
@@ -50,7 +50,6 @@ let currentBoxText = '';
 Object.keys(buttonBoxData).forEach(text => {
     const button = document.createElement('button');
     button.classList.add('button-with-image');
-    button.style.backgroundImage = `url(${buttonBoxData[text].image})`;
 
     const buttonText = document.createElement('span');
     buttonText.classList.add('button-text');

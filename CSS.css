@@ -33,6 +33,7 @@ body {
 }
 
 .button-with-image {
+    background-image: url('images/Tape.png'); /* Corrected background image path */
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -114,11 +115,6 @@ body {
 }
 
 @media only screen and (max-width: 768px) {
-    .dynamic-box {
-        width: 90%;
-        height: 80%;
-    }
-
     .button-text {
         font-size: 3vw;
     }
