@@ -15,9 +15,9 @@ function showCenterText() {
 // Function to toggle background images
 function toggleBackgroundImage() {
     if (backgroundImage.src.includes('ImageLight.png')) {
-        backgroundImage.src = 'images/ImageDark.png';
+        backgroundImage.src = 'images/ImageDark.png'; // Corrected image path
     } else {
-        backgroundImage.src = 'images/ImageLight.png';
+        backgroundImage.src = 'images/ImageLight.png'; // Corrected image path
     }
 }
 
@@ -50,7 +50,6 @@ let currentBoxText = '';
 Object.keys(buttonBoxData).forEach(text => {
     const button = document.createElement('button');
     button.classList.add('button-with-image');
-    button.id = 'tapeImage';  // Add the ID for the Tape background
 
     const buttonText = document.createElement('span');
     buttonText.classList.add('button-text');
@@ -94,7 +93,3 @@ Object.keys(buttonBoxData).forEach(text => {
 });
 
 centerText.addEventListener('click', toggleBackgroundImage);
-
-// Debugging
-console.log('Background image path:', backgroundImage.src);
-console.log('Button background image path:', document.querySelector('.button-with-image').style.backgroundImage);
