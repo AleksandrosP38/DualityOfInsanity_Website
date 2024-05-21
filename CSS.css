@@ -57,7 +57,7 @@ body {
 
 .button-text {
     display: block;
-    color: black; /* Change text color to black */
+    color: rgb(255, 255, 255); /* Change text color to black */
     font-family: Chiller, sans-serif;
     font-size: 1.5vw;
 }
