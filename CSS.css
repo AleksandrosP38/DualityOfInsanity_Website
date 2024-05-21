@@ -42,7 +42,7 @@ body {
     flex: 1;
     padding: 1vw;
     text-align: center;
-    background-color: transparent;
+    background-color: black; /* Set background color to black */
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
@@ -61,7 +61,7 @@ body {
 
 .button-text {
     display: block;
-    color: #ffffff !important;
+    color: #000000 !important; 
     font-family: Chiller, sans-serif;
     font-size: 1.5vw;
 }
@@ -118,6 +118,11 @@ body {
 }
 
 @media only screen and (max-width: 768px) {
+    .dynamic-box {
+        width: 90%;
+        height: 80%;
+    }
+
     .button-text {
         font-size: 3vw;
     }
