@@ -33,7 +33,6 @@ body {
 }
 
 .button-with-image {
-    background-image: url('images/Tape.png'); /* Corrected background image path */
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -43,8 +42,12 @@ body {
     flex: 1;
     padding: 1vw;
     text-align: center;
-    background-color: black; /* Set background color to black */
+    background-color: transparent;
     transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+#tapeImage {
+    background-image: url('images/Tape.png');
 }
 
 .button-with-image:hover {
@@ -58,11 +61,7 @@ body {
 
 .button-text {
     display: block;
-<<<<<<< HEAD
-    color: #ffffff !important; 
-=======
-    color: #ffffff !important; /* Force white text color */
->>>>>>> parent of 9f56fc3 (buttons image test 2)
+    color: #ffffff !important;
     font-family: Chiller, sans-serif;
     font-size: 1.5vw;
 }
@@ -119,11 +118,6 @@ body {
 }
 
 @media only screen and (max-width: 768px) {
-    .dynamic-box {
-        width: 90%;
-        height: 80%;
-    }
-
     .button-text {
         font-size: 3vw;
     }
